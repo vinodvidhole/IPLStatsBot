@@ -1,5 +1,5 @@
 # IPL 2023 Statsbot 🏏
-### Powered by Azure Open AI, Python, LangChain, SQL, and Streamlit
+### AI chatbot for IPL statistics and data analysis powered by Azure Open AI, Python, LangChain, SQL, and Streamlit
 
 **Author:** [Vinod Dhole](https://www.linkedin.com/in/vinodvidhole/)
 
