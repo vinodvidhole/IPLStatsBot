@@ -9,7 +9,7 @@ import streamlit as st
 import os
 import openai
 
-
+st.set_option('server.enableStaticServing', True)
 # Setting Menu options and web page configurations
 st.set_page_config(
     page_title="IPL 2023 StatsBot",
