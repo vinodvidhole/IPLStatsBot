@@ -1,2 +1,4 @@
 # IPLStatsBot
-IPL Stats Bot: Unleash the power of AI to query IPL statistics on custom SQL data, Powered by Azure OpenAI, Python, LangChain, and Streamlit
+AI chatbot for IPL statistics and data analysis powered by Azure Open AI, Python, LangChain, SQL, and Streamlit
+
+
