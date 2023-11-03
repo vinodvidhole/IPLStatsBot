@@ -199,6 +199,8 @@ initialize_session_state()
 path = os.path.dirname(__file__)
 # Define the logo path
 logo_path = os.path.join(path, "static", "ipl.png")
+user_icon_path = os.path.join(path, "static", "user_icon.png")
+ai_icon_path = os.path.join(path, "static", "ipl.png")
 
 st.image(logo_path, width=200)
 
@@ -214,13 +216,13 @@ if __name__ == "__main__":
 
     with chat_placeholder:
         for chat in st.session_state.history:
+            #icon_path = ai_icon_path if chat.origin == 'ai' else user_icon_path
+            icon_url = "https://i.imgur.com/oodRG9v.png" if chat.origin == 'ai' else "https://i.imgur.com/VLL4hVH.png"
             div = f"""
     <div class="chat-row 
         {'' if chat.origin == 'ai' else 'row-reverse'}">
-        <img class="chat-icon" src="app/static/{
-            'ai_icon.png' if chat.origin == 'ai' 
-                        else 'user_icon.png'}"
-            width=32 height=32>
+        <img class="chat-icon" src="{icon_url}" 
+            width=32 height=32>   
         <div class="chat-bubble
         {'ai-bubble' if chat.origin == 'ai' else 'human-bubble'}">
             &#8203;{chat.message}
@@ -228,6 +230,16 @@ if __name__ == "__main__":
     </div>
             """
             st.markdown(div, unsafe_allow_html=True)
+
+##
+#<img class="chat-icon" src="app/static/{
+#            'ai_icon.png' if chat.origin == 'ai' 
+#                        else 'user_icon.png'}"
+#            width=32 height=32>
+#<img class="chat-icon" src="{icon_url}" 
+#            width=32 height=32> 
+##
+
         
         for _ in range(3):
             st.markdown("")
