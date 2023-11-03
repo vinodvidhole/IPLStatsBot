@@ -3,7 +3,7 @@
 
 **Author:** [Vinod Dhole](https://www.linkedin.com/in/vinodvidhole/)
 
-**App Link:** [https://iplstatsbot.streamlit.app/]
+**App Link:** [https://iplstatsbot.streamlit.app/](https://iplstatsbot.streamlit.app/)
 
 **Source Code:** [GitHub](https://github.com/vinodvidhole/IPLStatsBot)
 
