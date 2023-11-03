@@ -199,8 +199,8 @@ initialize_session_state()
 path = os.path.dirname(__file__)
 # Define the logo path
 logo_path = os.path.join(path, "static", "ipl.png")
-user_icon_path = os.path.join(path, "static", "user_icon.png")
-ai_icon_path = os.path.join(path, "static", "ipl.png")
+#user_icon_path = os.path.join(path, "static", "user_icon.png")
+#ai_icon_path = os.path.join(path, "static", "ipl.png")
 
 st.image(logo_path, width=200)
 
@@ -230,16 +230,6 @@ if __name__ == "__main__":
     </div>
             """
             st.markdown(div, unsafe_allow_html=True)
-
-##
-#<img class="chat-icon" src="app/static/{
-#            'ai_icon.png' if chat.origin == 'ai' 
-#                        else 'user_icon.png'}"
-#            width=32 height=32>
-#<img class="chat-icon" src="{icon_url}" 
-#            width=32 height=32> 
-##
-
         
         for _ in range(3):
             st.markdown("")
