@@ -137,6 +137,26 @@ def get_prompt():
 
     {table_info}
 
+    Some examples of SQL queries that correspond to questions are:
+
+    Question: "Who won the final match of IPL 2023"
+    SQLQuery: "SELECT winner FROM each_match_records WHERE match_type = 'Final' ORDER BY date DESC LIMIT 1"
+    SQLResult: "[('Chennai Super Kings',)]"
+
+    Answer: "Chennai Super Kings"
+
+    Question: "Who is the top run-scorer in IPL 2023"
+    SQLQuery: "SELECT batter, SUM(score) AS total_runs FROM each_ball_records GROUP BY batter ORDER BY total_runs DESC"
+    SQLResult: "[('Shubman Gill', 916)]"
+
+    Answer: "​Shubman Gill is the top run-scorer in IPL 2023 with a total of 916 runs."
+
+    Question: "​Who took most wickets"
+    SQLQuery: "SLECT bowler, COUNT(*) AS wickets FROM each_ball_records WHERE outcome = 'out' GROUP BY bowler ORDER BY wickets DESC LIMIT 1 "
+    SQLResult: "[('Mohammed Shami', )]"
+
+    Answer: "​The bowler who took the most wickets is Mohammed Shami."
+    
     Question: {input}"""
 
     PROMPT = PromptTemplate(
